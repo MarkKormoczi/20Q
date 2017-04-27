@@ -5,9 +5,9 @@
 #include <string>
 
 class BinaryNod{
+    std::string item;
     BinaryNod* left;
     BinaryNod* right;
-    std::string item;
     
 public:
     BinaryNod(std::string item) : item(item), left(nullptr), right(nullptr) { std::cout << "Nod created" << std::endl; }
