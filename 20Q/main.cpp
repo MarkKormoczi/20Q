@@ -1,15 +1,13 @@
-//
-//  main.cpp
-//  20Q
-//
-//  Created by Mark Kormoczi on 2017. 04. 27..
-//  Copyright © 2017. Mark Kormoczi. All rights reserved.
-//
-
 #include <iostream>
+#include "Game.hpp"
+#include "BinaryTree.hpp"
+#include "BinaryNod.hpp"
+#include "FileHandler.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...  
-    std::cout << "Hello, World!\n";
+    BinaryNod nod("First Nod");
+    BinaryTree tree(&nod);
+    FileHandler fh("file.txt");
+    Game game(&tree);
     return 0;
 }

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		FBBED3AC1EB1E21300698324 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FBBED3AB1EB1E21300698324 /* main.cpp */; };
+		FBBED3B41EB1E2FC00698324 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FBBED3B21EB1E2FC00698324 /* Game.cpp */; };
+		FBBED3B71EB1E35B00698324 /* BinaryNod.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FBBED3B51EB1E35B00698324 /* BinaryNod.cpp */; };
+		FBBED3BA1EB1E4E500698324 /* FileHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FBBED3B81EB1E4E500698324 /* FileHandler.cpp */; };
+		FBBED3BD1EB1E5A900698324 /* BinaryTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FBBED3BB1EB1E5A900698324 /* BinaryTree.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,14 @@
 /* Begin PBXFileReference section */
 		FBBED3A81EB1E21300698324 /* 20Q */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 20Q; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBED3AB1EB1E21300698324 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FBBED3B21EB1E2FC00698324 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		FBBED3B31EB1E2FC00698324 /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		FBBED3B51EB1E35B00698324 /* BinaryNod.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryNod.cpp; sourceTree = "<group>"; };
+		FBBED3B61EB1E35B00698324 /* BinaryNod.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinaryNod.hpp; sourceTree = "<group>"; };
+		FBBED3B81EB1E4E500698324 /* FileHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileHandler.cpp; sourceTree = "<group>"; };
+		FBBED3B91EB1E4E500698324 /* FileHandler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileHandler.hpp; sourceTree = "<group>"; };
+		FBBED3BB1EB1E5A900698324 /* BinaryTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryTree.cpp; sourceTree = "<group>"; };
+		FBBED3BC1EB1E5A900698324 /* BinaryTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinaryTree.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,14 @@
 			isa = PBXGroup;
 			children = (
 				FBBED3AB1EB1E21300698324 /* main.cpp */,
+				FBBED3B21EB1E2FC00698324 /* Game.cpp */,
+				FBBED3B31EB1E2FC00698324 /* Game.hpp */,
+				FBBED3B51EB1E35B00698324 /* BinaryNod.cpp */,
+				FBBED3B61EB1E35B00698324 /* BinaryNod.hpp */,
+				FBBED3B81EB1E4E500698324 /* FileHandler.cpp */,
+				FBBED3B91EB1E4E500698324 /* FileHandler.hpp */,
+				FBBED3BB1EB1E5A900698324 /* BinaryTree.cpp */,
+				FBBED3BC1EB1E5A900698324 /* BinaryTree.hpp */,
 			);
 			path = 20Q;
 			sourceTree = "<group>";
@@ -120,7 +140,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBBED3B71EB1E35B00698324 /* BinaryNod.cpp in Sources */,
 				FBBED3AC1EB1E21300698324 /* main.cpp in Sources */,
+				FBBED3BA1EB1E4E500698324 /* FileHandler.cpp in Sources */,
+				FBBED3B41EB1E2FC00698324 /* Game.cpp in Sources */,
+				FBBED3BD1EB1E5A900698324 /* BinaryTree.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
