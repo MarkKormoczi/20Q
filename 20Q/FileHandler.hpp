@@ -12,9 +12,9 @@ public:
     FileHandler(std::string name) : name(name) {
         std::cout << "FileHandler created with: " << name << std::endl;
     }
-    BinaryNod* createNod(std::string item, std::ofstream& os);
+    BinaryNod* createNod(std::string item, std::ifstream& is);
     void writeNod(BinaryNod* nod, std::ofstream& os);
-    void read(BinaryTree* tree);
+    BinaryTree read();
     void write(BinaryTree* tree);
     ~FileHandler() {}
 };

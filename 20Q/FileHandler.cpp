@@ -1,20 +1,22 @@
 #include "FileHandler.hpp"
 
-void FileHandler::read(BinaryTree* tree) {
-    /*
-    std::string line;
-    file.open(name, std::fstream::in | std::fstream::out | std::fstream::trunc);
-    if (file.is_open())
+BinaryTree FileHandler::read() {
+    std::ifstream is;
+    is.open(name);
+    if (!is.is_open())
     {
-        getline (file,line);
-        std::cout << line << std::endl;
-        tree = new BinaryTree(createNod(line));
+        is.close();
+        std::ofstream os;
+        os.open(name);
+        os << "Is it an animal?\nHuman\n.\n.\nDog\n.\n.";
+        os.close();
     }
-    else{
-        file << "Is it an animal?\nHuman\n.\n.\nDog\n.\n.";
-    }
-    file.close();*/
+    std::string line;
+    std::getline(is, line);
+    BinaryTree bt(createNod(line, is));
+    return bt;
 }
+
 void FileHandler::write(BinaryTree* tree) {
     std::ofstream os;
     os.open(name);
@@ -32,13 +34,12 @@ void FileHandler::writeNod(BinaryNod* nod, std::ofstream& os){
     }
 }
 
-BinaryNod* FileHandler::createNod(std::string item, std::ofstream& os){
-    /*if(item == ".") return nullptr;
+BinaryNod* FileHandler::createNod(std::string item, std::ifstream& is){
+    if(item == ".") return nullptr;
     BinaryNod* root = new BinaryNod(item);
-    getline(file, item);
-    root->setLeft(createNod(item));
-    getline (file, item);
-    root->setRight(createNod(item));
-    return root;*/
-    return nullptr;
+    std::getline(is, item);
+    root->setLeft(createNod(item, is));
+    std::getline(is, item);
+    root->setRight(createNod(item, is));
+    return root;
 }

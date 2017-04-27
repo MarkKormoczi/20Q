@@ -10,7 +10,7 @@ class BinaryNod{
     BinaryNod* right;
     
 public:
-    BinaryNod(std::string item) : item(item), left(nullptr), right(nullptr) { std::cout << "Nod created" << std::endl; }
+    BinaryNod(std::string item) : item(item), left(nullptr), right(nullptr) { std::cout << "Nod created" <<std::endl; }
     BinaryNod* getLeft() { return left; }
     BinaryNod* getRight() { return right; }
     std::string getItem() { return item; }
