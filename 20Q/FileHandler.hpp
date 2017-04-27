@@ -8,13 +8,12 @@
 
 class FileHandler{
     std::string name;
-    std::fstream file;
 public:
-    FileHandler(std::string name) : name(name), file(std::fstream(name)) {
+    FileHandler(std::string name) : name(name) {
         std::cout << "FileHandler created with: " << name << std::endl;
     }
-    BinaryNod* createNod(std::string item);
-    void writeNod(BinaryNod* nod);
+    BinaryNod* createNod(std::string item, std::ofstream& os);
+    void writeNod(BinaryNod* nod, std::ofstream& os);
     void read(BinaryTree* tree);
     void write(BinaryTree* tree);
     ~FileHandler() {}

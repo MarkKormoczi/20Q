@@ -20,8 +20,8 @@ int main(int argc, const char * argv[]) {
     nod1.setRight(&nod3);
     BinaryTree tree(&nod1);
     FileHandler fh("file.txt");
-    fh.read(&tree);
-    std::cout << tree.getRoot()->getRight()->getLeft()->getItem() << std::endl; //4
+    fh.write(&tree);
+    std::cout << tree.getRoot()->getItem() << std::endl; //4
     Game game(&tree);
     return 0;
 }
