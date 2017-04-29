@@ -4,10 +4,13 @@
 #include "BinaryNod.hpp"
 #include "FileHandler.hpp"
 
+#define commandline
+
 int main(int argc, const char * argv[]) {
     FileHandler fh("file.txt");
     BinaryTree tree = fh.read();
     Game game(&tree);
+#ifdef commandline
     while(!game.getPos()->isItLeaf()){
         std::cout << game.getQuestion() << " Y/N" <<std::endl;
         std::string str;
@@ -35,10 +38,9 @@ int main(int argc, const char * argv[]) {
         std::cout << "Write an answer, that is true for: " << newQuestion << std::endl;
         std::getline(std::cin, newAnswer);
         std::cout << "Thanks for playing!";
-        game.getPos()->setItem(newQuestion);
-        game.getPos()->setLeft(new BinaryNod(ans));
-        game.getPos()->setRight(new BinaryNod(newAnswer));
+        game.insert(newQuestion, newAnswer);
     }
+#endif
     fh.write(&tree);
     return 0;
 }

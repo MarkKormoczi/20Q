@@ -1,15 +1,15 @@
-1
-left
+Is it an animal?
+Human
 .
 .
-right
-4
-6
+Is it a dog?
+Does it like mice?
+Cat
 .
 .
-7
+Mice
 .
 .
-5
+Dog
 .
 .

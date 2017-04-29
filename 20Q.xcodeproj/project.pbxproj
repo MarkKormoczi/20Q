@@ -275,6 +275,7 @@
 				FBBED3B11EB1E21300698324 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
