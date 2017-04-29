@@ -8,9 +8,7 @@ class BinaryTree{
     BinaryNod* root;
     
 public:
-    BinaryTree(BinaryNod* root) : root(root) {
-        std::cout << "Tree created" << std::endl;
-    }
+    BinaryTree(BinaryNod* root) : root(root) {  }
     BinaryNod* getRoot() { return root; }
     ~BinaryTree() {}
 };

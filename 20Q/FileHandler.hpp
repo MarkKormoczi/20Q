@@ -9,9 +9,7 @@
 class FileHandler{
     std::string name;
 public:
-    FileHandler(std::string name) : name(name) {
-        std::cout << "FileHandler created with: " << name << std::endl;
-    }
+    FileHandler(std::string name) : name(name) {   }
     BinaryNod* createNod(std::string item, std::ifstream& is);
     void writeNod(BinaryNod* nod, std::ofstream& os);
     BinaryTree read();

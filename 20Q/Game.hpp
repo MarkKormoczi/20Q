@@ -9,7 +9,7 @@
 class Game{
     BinaryNod* pos;
 public:
-    Game(BinaryTree* tree) : pos(tree->getRoot()) { std::cout << "Game created" << std::endl; }
+    Game(BinaryTree* tree) : pos(tree->getRoot()) {  }
     void setPos(BinaryNod* nod) { pos = nod; }
     BinaryNod* getPos() { return pos; }
     std::string getQuestion();

@@ -5,23 +5,40 @@
 #include "FileHandler.hpp"
 
 int main(int argc, const char * argv[]) {
-    BinaryNod nod7("7");
-    BinaryNod nod6("6");
-    BinaryNod nod4("4");
-    nod4.setLeft(&nod6);
-    nod4.setRight(&nod7);
-    BinaryNod nod5("5");
-    BinaryNod nod3("3");
-    nod3.setLeft(&nod4);
-    nod3.setRight(&nod5);
-    BinaryNod nod2("2");
-    BinaryNod nod1("1");
-    nod1.setLeft(&nod2);
-    nod1.setRight(&nod3);
-    BinaryTree tree(&nod1);
     FileHandler fh("file.txt");
-    tree = fh.read();
-    std::cout << tree.getRoot()->getRight()->getItem() << std::endl; //right
+    BinaryTree tree = fh.read();
     Game game(&tree);
+    while(!game.getPos()->isItLeaf()){
+        std::cout << game.getQuestion() << " Y/N" <<std::endl;
+        std::string str;
+        std::cin >> str;
+        if(str == "Y" || str == "y") game.answer(true);
+        else if(str == "N" || str == "n") game.answer(false);
+        else std::cout << "Answer with Y or N" << std::endl;
+    }
+    std::string ans = game.getQuestion();
+    std::cout << "I know! " << ans << "? Y/N" <<std::endl;
+    std::string str;
+    while(true){
+        std::cin >> str;
+        if(str == "Y" || str == "y" || str == "N" || str == "n") break;
+        else std::cout << "Answer with Y or N" << std::endl;
+    }
+    if(str == "Y" || str == "y"){
+        std::cout << "YAY!" << std::endl;
+    }
+    else if(str == "N" || str == "n"){
+        std::string newQuestion;
+        std::string newAnswer;
+        std::cout << "Write a question, that isn't true for: " << ans << std::endl;
+        std::getline(std::cin.ignore(1), newQuestion);
+        std::cout << "Write an answer, that is true for: " << newQuestion << std::endl;
+        std::getline(std::cin, newAnswer);
+        std::cout << "Thanks for playing!";
+        game.getPos()->setItem(newQuestion);
+        game.getPos()->setLeft(new BinaryNod(ans));
+        game.getPos()->setRight(new BinaryNod(newAnswer));
+    }
+    fh.write(&tree);
     return 0;
 }
